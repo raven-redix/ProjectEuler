@@ -65,7 +65,7 @@ let arr = [1,2]
 // will not iterate over each number; should i = 1?
 const Fibonacci = (arr) => {
     // continue to do this until the last number of the array is <= 4 mil
-    let highest = arrInit.slice(-1)
+    let highest = Math.max(...arrInit)
     while (highest <= 4000000000) {
         // set the last two items of arrInit as an array to the variable slicedArr
         let slicedArr = arrInit.slice(-2)
@@ -84,11 +84,6 @@ const Fibonacci = (arr) => {
     even.reduce(reducer);
 }
 
-// console.timeEnd()
-
-// what are we trying to do?
-    // the last number does not need to push another value onto the array once if it is over 4 mil
-
 // Fibonacci(arrInit);
 console.time('Fibonacci @ length 4')
 Fibonacci(arrInit);
@@ -98,6 +93,6 @@ console.timeEnd('Fibonacci @ length 4')
 // Fibonacci(arr);
 // console.timeEnd('Fibonacci @ length 2')
 
-// 
+
 
 // Test
