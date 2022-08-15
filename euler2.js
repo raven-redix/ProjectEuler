@@ -59,9 +59,8 @@ function reducer(previousValue, currentValue, index) {
     return total
 }
 
-let arr = [1,2,3,5,8]
-// arr = arr.slice(-2)
-// arr.reduce(reducer);
+let arr = [1,2]
+
 
 // will not iterate over each number; should i = 1?
 const Fibonacci = (arr) => {
@@ -90,9 +89,14 @@ const Fibonacci = (arr) => {
 // what are we trying to do?
     // the last number does not need to push another value onto the array once if it is over 4 mil
 
+// Fibonacci(arrInit);
+console.time('Fibonacci @ length 4')
 Fibonacci(arrInit);
-// console.timeEnd('Fibonacci @ length 1')
-// console.timeEnd('Fibonacci @ length 4 million')
+console.timeEnd('Fibonacci @ length 4')
+
+// console.time('Fibonacci @ length 2')
+// Fibonacci(arr);
+// console.timeEnd('Fibonacci @ length 2')
 
 // 
 
