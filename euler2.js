@@ -67,24 +67,33 @@ let arr = [1,2,3,5,8]
 const Fibonacci = (arr) => {
     // continue to do this until the last number of the array is <= 4 mil
     let highest = arrInit.slice(-1)
-    while (highest <= 90) {
+    while (highest <= 4000000000) {
         // set the last two items of arrInit as an array to the variable slicedArr
         let slicedArr = arrInit.slice(-2)
         // get the sum of the newly created array
         let newNum = slicedArr.reduce(reducer);
         // add new value to array
-        arrInit.push(newNum);
+        newNum < 4000000000 ? arrInit.push(newNum) : null
         // update highest
-        highest = newNum;
+        highest = newNum;    
     }
     const even = arrInit.filter(i => {
         return i % 2 === 0;
     });
     console.log(even.reduce(reducer))
+    console.log("array: ", arrInit)
     even.reduce(reducer);
 }
 
+// console.timeEnd()
+
+// what are we trying to do?
+    // the last number does not need to push another value onto the array once if it is over 4 mil
 
 Fibonacci(arrInit);
+// console.timeEnd('Fibonacci @ length 1')
+// console.timeEnd('Fibonacci @ length 4 million')
+
+// 
 
 // Test
