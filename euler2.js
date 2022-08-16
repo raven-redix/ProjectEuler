@@ -66,7 +66,7 @@ const Fibonacci = (arr) => {
 }
 // **************************************************
 
-
+// 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,
 
 // ********************** Test **********************
 // Fibonacci(arrInit);
@@ -79,3 +79,8 @@ console.timeEnd('Fibonacci @ length 4')
 // console.timeEnd('Fibonacci @ length 2')
 
 // ***************************************************
+
+
+// another way to write this would be 
+const sumMultiArray = (arr) => arr.flat(Infinity).reduce((p, c) => (p += c));
+// Array.flat() is recursive

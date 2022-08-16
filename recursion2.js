@@ -36,18 +36,14 @@ const countVowels = (str, count = 0) => {
     // base case or string.length === 0
     if (str === '') {
         // console.log("This is the string: ", str)
-        return 0;
+        return count;
     }
 
     str = str.toLowerCase();
-    // console.log("This is the string: ", str)
-
     // recursive case
-    // define vowels as an array
-    const vowels = ['a', 'e', 'i', 'o', 'u']
-
     const newString = str.substring(1) 
     console.log("New string: ", newString)
+    console.log(typeof newString);
     // first letter of the string
     let text = str.charAt(0);
     console.log("Text: ", text);
@@ -56,15 +52,12 @@ const countVowels = (str, count = 0) => {
         // if the first letter of the string is a vowel, add 1 to count and return count
         count += 1
         console.log("Vowel count: ", count)
-        countVowels(newString, count)
-        return count;
+        return countVowels(newString, count) 
     } else {
         count += 0
-        countVowels(newString, count)
-        return count;
+        console.log("Vowel count: ", count)
+        return countVowels(newString, count) 
     }
-    // call the recursive function
-
 }
 
 let test = countVowels('eating');
@@ -74,6 +67,6 @@ console.log("return: ", test);
 
 
 // ********************** Test **********************
-
+let test1 = count
 
 // ***************************************************
