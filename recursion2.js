@@ -67,6 +67,9 @@ console.log("return: ", test0);
 
 
 // ********************** Test **********************
+let baseTest = countVowels(''); //=> 0
+console.log("return: ", baseTest);
+
 let test1 = countVowels('abracadabra'); //=> 5
 console.log("return: ", test1);
 
