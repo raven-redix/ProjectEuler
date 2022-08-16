@@ -3,25 +3,28 @@
 
 // sumNums(3); // => 6 (3 + 2 + 1)
 
-// Summarize
+// ******************** Summarize ********************
+
 // function that takes a value(num) and returns the sum of all numbers from 1 to num(the specified value)
 
+// ***************************************************
 
-// Example
+// ******************** Example **********************
     // sumNumsEx(3); // => 6 (3 + 2 + 1)
     // sumNumsEx(10); // => 55 (10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 +1)
     // sumNumsEx(12) // => 55 (12 + 11 + 10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 +1)
 
 
-// Approach
+// ***************************************************
 
+// ******************** Approach ********************
+//non-recursive
 function reducer(previousValue, currentValue, index) {
     const total = previousValue + currentValue;
     console.log(`previousValue: ${previousValue}, currentValue: ${currentValue}, index: ${index}, returns: ${total}`);
     return total
 }
 
-//non-recursive
 function getTotal(num) {
     // definining the variable that will hold the sum of all numbers
     let total = 0 + num;
@@ -36,6 +39,7 @@ function getTotal(num) {
 
 getTotal(10);
 
+// recursive
 function sumNumsEx(num, total=0) {
     // base case: num is 0 or 1
     if (num <= 1) {
@@ -48,7 +52,10 @@ function sumNumsEx(num, total=0) {
     return total;
 }
 
-// Test
+// ***************************************************
+
+
+// ********************** Test **********************
 let baseTest = sumNumsEx(0);
 console.log("Total Sum: ", baseTest);
 
@@ -60,3 +67,5 @@ console.log("Total Sum: ", test1);
 
 let test2 = sumNumsEx(12);
 console.log("Total Sum: ", test2);
+
+// ***************************************************
