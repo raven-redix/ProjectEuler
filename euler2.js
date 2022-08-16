@@ -1,36 +1,22 @@
-// ********** Summarize **********
+// ******************** Summarize ********************
 
 // create an array of values based on Fibonacci sequence, starting with one and two
     // add two values of the 
 // sum all even values of the sequence
 // terms of sequence can not exceed 4 million
-// *******************************
+// ***************************************************
 
-// ********** Example **********
 
-// [1,2,3,5,8,13,21,34,55,89] sum = 44
 
-// *******************************
+// ******************** Example **********************
 
-// Approach
+// [1,2,3,5,8,13,21,34,55,89] sumOfEvenNums = 44
 
-// for loop
-let arraySum;
-// const slice = arr.slice(-2)
-// console.log(slice)
+// ***************************************************
 
-// slice.reduce();
-// console.log(total);
 
-// const array = [15, 16, 17, 18, 19];
 
-// function reducer(previousValue, currentValue, index) {
-//   const returns = previousValue + currentValue;
-//   console.log(`previousValue: ${previousValue}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`);
-//   return returns;
-// }
-
-// array.reduce(reducer);
+// ******************** Approach ********************
 
 // this is a loop and happens as long as i != 4 million
 // initial arr = [1,2]
@@ -47,12 +33,6 @@ let arraySum;
 
 
 
-
-let arrInit = [1,2,3,5] 
-
- 
-
-
 function reducer(previousValue, currentValue, index) {
     const total = previousValue + currentValue;
     console.log(`previousValue: ${previousValue}, currentValue: ${currentValue}, index: ${index}, returns: ${total}`);
@@ -60,6 +40,7 @@ function reducer(previousValue, currentValue, index) {
 }
 
 let arr = [1,2]
+let arrInit = [1,2,3,5] 
 
 
 // will not iterate over each number; should i = 1?
@@ -83,12 +64,11 @@ const Fibonacci = (arr) => {
     console.log("array: ", arrInit)
     even.reduce(reducer);
 }
+// **************************************************
 
-// console.timeEnd()
 
-// what are we trying to do?
-    // the last number does not need to push another value onto the array once if it is over 4 mil
 
+// ********************** Test **********************
 // Fibonacci(arrInit);
 console.time('Fibonacci @ length 4')
 Fibonacci(arrInit);
@@ -98,6 +78,4 @@ console.timeEnd('Fibonacci @ length 4')
 // Fibonacci(arr);
 // console.timeEnd('Fibonacci @ length 2')
 
-// 
-
-// Test
+// ***************************************************
