@@ -35,38 +35,45 @@
 const countVowels = (str, count = 0) => {
     // base case or string.length === 0
     if (str === '') {
-        // console.log("This is the string: ", str)
+        // console.log("This is an empty string: ", str)
         return count;
     }
 
     str = str.toLowerCase();
     // recursive case
     const newString = str.substring(1) 
-    console.log("New string: ", newString)
-    console.log(typeof newString);
+    // console.log("New string: ", newString)
+    // console.log(typeof newString);
     // first letter of the string
     let text = str.charAt(0);
-    console.log("Text: ", text);
+    // console.log("Text: ", text);
     // check if text is a vowel
     if (text == 'a' || text == 'e' || text == 'i' || text == 'o' || text == 'u') {
         // if the first letter of the string is a vowel, add 1 to count and return count
         count += 1
-        console.log("Vowel count: ", count)
+        // console.log("Vowel count: ", count)
         return countVowels(newString, count) 
     } else {
         count += 0
-        console.log("Vowel count: ", count)
+        // console.log("Vowel count: ", count)
         return countVowels(newString, count) 
     }
 }
 
-let test = countVowels('eating');
-console.log("return: ", test);
+let test0 = countVowels('eating'); // => 3
+console.log("return: ", test0);
 
 // **************************************************
 
 
 // ********************** Test **********************
-let test1 = count
+let test1 = countVowels('abracadabra'); //=> 5
+console.log("return: ", test1);
+
+let test2 = countVowels('Four score and seven years'); // => 9
+console.log("return: ", test2);
+
+let test3 = countVowels('Today is Tuesday!'); // => 6
+console.log("return: ", test3);
 
 // ***************************************************
