@@ -60,7 +60,7 @@ const Fibonacci = (arr) => {
     const even = arrInit.filter(i => {
         return i % 2 === 0;
     });
-    console.log(even.reduce(reducer))
+    console.log("even #: ", even.reduce(reducer))
     console.log("array: ", arrInit)
     even.reduce(reducer);
 }
