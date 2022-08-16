@@ -32,65 +32,46 @@
 // // vowelCount('pAper');
 
 // recursive
-const countVowels = (str) => {
+const countVowels = (str, count = 0) => {
     // base case or string.length === 0
     if (str === '') {
-        console.log("This is the string: ", str)
+        // console.log("This is the string: ", str)
         return 0;
     }
+
     str = str.toLowerCase();
-    console.log("This is it: ", str);
-    console.log("This is the string: ", str)
+    // console.log("This is the string: ", str)
+
     // recursive case
-    // have a variable to store the vowels count
-    let count = 0;
     // define vowels as an array
     const vowels = ['a', 'e', 'i', 'o', 'u']
-    // return countVowels(//with next character in the string?);
-    
-    //look at each letter in the string
-    // remove it 
-    const letter = str.substring(1) 
-    console.log("Letter: ", letter)
-    console.log(str);
-    // and if it is a vowel add 1 to the count
 
+    const newString = str.substring(1) 
+    console.log("New string: ", newString)
+    // first letter of the string
     let text = str.charAt(0);
-    console.log(text);
+    console.log("Text: ", text);
     // check if text is a vowel
+    if (text == 'a' || text == 'e' || text == 'i' || text == 'o' || text == 'u') {
+        // if the first letter of the string is a vowel, add 1 to count and return count
+        count += 1
+        console.log("Vowel count: ", count)
+        countVowels(newString, count)
+        return count;
+    } else {
+        count += 0
+        countVowels(newString, count)
+        return count;
+    }
+    // call the recursive function
 
-
-    // countVowels(letter);
-    
-
-    // console.log("Result: ", result)
-    // let count = result.length;
-    // console.log("Count: ", count);
 }
 
-let test = countVowels('Paper');
-console.log(test);
-
-// program to count the number of vowels in a string
-
-// function countVowel(str) { 
-
-//     // find the count of vowels
-//     const count = str.match(/[aeiou]/gi).length;
-
-//     // return number of vowels
-//     return count;
-// }
-
-// // take input
-
-// const result = countVowel('paper');
-
-// console.log(result);
+let test = countVowels('eating');
+console.log("return: ", test);
 
 // **************************************************
 
-// countVowels(str)
 
 // ********************** Test **********************
 
